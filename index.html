@@ -1,3 +1,15 @@
-{% for item in titles.title_list %}
-<span> {{item}}  </span>
-{% endfor %}
+<!DOCTYEP html>
+<html>
+    <html lang="zh-CN">
+        <head>
+            <meta charset="UTF-8">
+            <title>Index</title>
+        </head>
+    <body>
+        <ul>
+            {% for file in files %}
+                <a href="{{url_for('file', file_id=file.id)}}">{{file.title}}</a>
+            {% endfor %}
+        </ul>
+    </bodu>
+<html>
